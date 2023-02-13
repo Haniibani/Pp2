@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Harry Potter Quiz</title>
 </head>
 <body>
     
+    <div class="welcome-screen">
+        <button id="welcome-button">Begin</button>
+    </div>
+    <div id="quiz-container">
+        <div class="header">
+            <div class="number-of-count">
+                <span class="number-of-question">
+                    number of questions
+                </span>
+            </div>
+            <div class="timer-div">
+                <img id="time-turner" src="assets/images/timeturner.png" alt="Hermione's Timeturner" width="30px">
+                <span class="time-left">10s</span>
+            </div>
+        </div>
+        <div id="container">
+            <!-- questions and options will display here-->
+        </div>
+        <button id="next-question-button">Next</button>
+    </div>
+    <div class="score-container hide">
+        <div id="player-score">Player score</div>
+        <button id="restart-button">Restart</button>
+    </div>
+
+
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
