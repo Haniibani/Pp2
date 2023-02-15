@@ -161,3 +161,52 @@ nextButton.addEventListener("click", (function displayNext() {
     }
 }));
 
+function timerDisplay() {
+    countdown = setInterval(function() {
+        count--;
+        timeLeft.innerHTML = `${count}s`;
+        if (count === 0) {
+            clearInterval(countdown);
+            displayNext();
+        }
+    }, 1000);
+};
+
+function quizDisplay (questionCount) {
+    let quizCards = document.querySelectorAll(".container-mid");
+
+    quizCards.forEach(function (card) {
+        card.classList.add("hide");
+    });
+    quizCards[questionCount].classList.remove("hide");
+};
+
+function quizCreater() {
+    questionsArray.sort(function () {return Math.random() - 0.5});
+
+    for(let i of questionsArray) {
+        i.options.sort(function () {return Math.random() -0,5});
+        let div = document.createElement("div");
+        div.classList.add("container-mid", "hide");
+        
+        countOfQuestion.innerHTML = 1 + " of " + questionsArray.length + " Question";
+
+        let question_DIV = document.createElement("p");
+        question_DIV.classList.add("question");
+        question_DIV.innerHTML = i.question;
+        div.appendChild(question_DIV);
+
+        div.innerHTML += `
+        <button class="option-div" onclick="assertAnswer(this)">
+        ${i.options[0]}</button>
+        <button class="option-div" onclick="assertAnswer(this)">
+        ${i.options[1]}</button>
+        <button class="option-div" onclick="assertAnswer(this)">
+        ${i.options[2]}</button>
+        <button class="option-div" onclick="assertAnswer(this)">
+        ${i.options[3]}</button>
+        `;
+
+        gameContainer.appendChild(div);
+    }
+};
