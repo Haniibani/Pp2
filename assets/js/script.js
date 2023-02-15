@@ -234,3 +234,26 @@ function assertAnswer(userOption) {
         element.disabled = true;
     });
 }
+
+function initial() {
+    gameContainer.innerHTML= "";
+    questionCount = 0;
+    scoreCount = 0;
+    scoreCount = 0;
+    count = 11;
+    clearInterval(countdown);
+    timerDisplay();
+    quizCreater();
+    quizDisplay(questionCount);
+}
+
+welcomeButton.addEventListener("click", function () {
+    welcomeScreen.classList.add("hide");
+    quizContainer.classList.remove("hide");
+    initial();
+});
+
+window.onload = function () {
+    welcomeScreen.classList.remove("hide");
+    quizContainer.classList.add("hide");
+};
