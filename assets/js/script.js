@@ -161,6 +161,15 @@ nextButton.addEventListener("click", (function displayNext() {
     }
 }));
 
+function quizDisplay (questionCount) {
+    let quizCards = document.querySelectorAll(".container-mid");
+
+    quizCards.forEach(function (card) {
+        card.classList.add("hide");
+    });
+    quizCards[questionCount].classList.remove("hide");
+};
+
 function timerDisplay() {
     countdown = setInterval(function() {
         count--;
@@ -170,15 +179,6 @@ function timerDisplay() {
             displayNext();
         }
     }, 1000);
-};
-
-function quizDisplay (questionCount) {
-    let quizCards = document.querySelectorAll(".container-mid");
-
-    quizCards.forEach(function (card) {
-        card.classList.add("hide");
-    });
-    quizCards[questionCount].classList.remove("hide");
 };
 
 function quizCreater() {
@@ -210,3 +210,27 @@ function quizCreater() {
         gameContainer.appendChild(div);
     }
 };
+
+function assertAnswer(userOption) {
+    let userSolution = userOption.innerText;
+    let question = document.getElementsByClassName("container-mid")[questionCount];
+    let options = question.querySelectorAll(".option-div");
+
+    if (userSolution === questionsArray[questionCount].correct) {
+        userOption.classList.add("correct");
+        scoreCount++;
+    } else {
+        userOption.classList.add("incorrect");
+
+        options.forEach(function (element) {
+            if (element.innerText === questionsArray[questionCount].correct) {
+                element.classList.add("correct");
+            }
+        });
+    }
+
+    clearInterval(countdown);
+    options.forEach(function (element) {
+        element.disabled = true;
+    });
+}
