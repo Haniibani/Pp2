@@ -11,6 +11,9 @@ body {
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
 }
 
 button {
@@ -146,3 +149,25 @@ button {
     color: white;
 }
 
+footer {
+    height: 50px;
+    margin-top: auto;
+    z-index: 5;
+    background-color:rgba(27, 21, 21, 0.5);
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks > li {
+    display: inline;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.social-networks i {
+    font-size: 160%;
+    padding: 1%;
+    color: #f3f0f0;
+}
