@@ -25,10 +25,11 @@ button {
 #logo-header {
     display: flex;
     justify-content: center;
+    max-height: 20%;
 }
 
 #logo {
-    max-width: 30%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -55,12 +56,12 @@ button {
 
 #quiz-container {
     background-image: url(../images/pargment.png);
-    height: 500px;
+    height: 35rem;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
     padding: 3.1rem 1.8rem;
-    width: 80%;
+    width: 75%;
     max-width: 40em;
     margin: 0 auto;
     position: absolute;
@@ -91,7 +92,7 @@ button {
 
 #next-question-button {
     font-size: 1em;
-    margin-top: 1.5em;
+    margin-top: 1em;
     background-color: darkslategrey;
     color: white;
     padding: 0.7em 1.8em;
@@ -150,7 +151,7 @@ button {
 }
 
 footer {
-    height: 50px;
+    height: 3rem;
     margin-top: auto;
     z-index: 5;
     background-color:rgba(27, 21, 21, 0.5);
@@ -171,3 +172,37 @@ footer {
     padding: 1%;
     color: #f3f0f0;
 }
+
+
+@media screen and (max-width: 750px) {
+    #logo-header {
+        display: flex;
+        justify-content: center;
+        max-height: 40%;
+    }
+    
+    #logo {
+        max-width: 70%;
+        height: auto;
+    }
+
+  }
+
+  /* Small screens from 380px and down */
+  @media screen and (max-width: 450px) {
+    #quiz-container {
+        padding: 2rem 1rem;
+        height: 40rem;
+    }
+
+    footer {
+        height: 2rem;
+    }
+
+    .social-networks > li {
+        display: inline;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+  }
