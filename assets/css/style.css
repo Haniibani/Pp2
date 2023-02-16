@@ -101,8 +101,35 @@ button {
     display: none;
 }
 
+.question {
+    margin-bottom: 1.25em;
+    font-weight: 600;
+}
+
+.option-div {
+    font-size: 0.9em;
+    font-weight: bold;
+    width: 100%;
+    padding: 1em;
+    margin: 0.3em 0;
+    text-align: left;
+    outline: none;
+    background: rgba(255,255,255, 0.3);
+    border: 1px solid white;
+    border-radius: 0.3em;
+}
+
+.option-div:not(:disabled):hover {
+    background: rgba(255,255,255, 0.6);
+}
+
+.option-div:disabled {
+    color:black;
+    cursor: not-allowed;
+}
+
 .incorrect {
-    background-color: lightgray;
+    background-color: lightcoral;
     color: red;
     border-color: red;
 }
@@ -113,7 +140,9 @@ button {
     border-color: green;
 }
 
+
 #player-score {
     font-size: 1.5em;
     color: white;
 }
+
