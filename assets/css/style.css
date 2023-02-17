@@ -69,6 +69,7 @@ button {
     top: 50%;
     left: 50%;
     border-radius: 0.6em;
+    animation: fadeInAnimation ease 1s;
 }
 
 .header {
@@ -285,3 +286,12 @@ footer {
     scale: 1.3;
     transition: scale var(--animation-speed) linear;
   }
+
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+ }
