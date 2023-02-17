@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,8 +8,8 @@
 body {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/hogsmede.jpg);
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,8 @@ button {
     height: auto;
 }
 
-.welcome-screen, .score-container {
+.welcome-screen,
+.score-container {
     position: absolute;
     top: 0;
     width: 100%;
@@ -43,7 +44,8 @@ button {
     justify-content: center;
 }
 
-#welcome-button, #restart-button {
+#welcome-button,
+#restart-button {
     font-size: 1.33em;
     padding: 0.5em 1.8em;
     border-radius: 0.2em;
@@ -56,8 +58,8 @@ button {
 #quiz-container {
     background-image: url(../images/pargment.png);
     height: 35rem;
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 3.1rem 1.8rem;
     width: 75%;
@@ -122,17 +124,17 @@ button {
     margin: 0.3em 0;
     text-align: left;
     outline: none;
-    background: rgba(255,255,255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
     border: 1px solid white;
     border-radius: 0.3em;
 }
 
 .option-div:not(:disabled):hover {
-    background: rgba(255,255,255, 0.6);
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .option-div:disabled {
-    color:black;
+    color: black;
     cursor: not-allowed;
 }
 
@@ -159,14 +161,14 @@ footer {
     position: absolute;
     bottom: 0;
     z-index: 2;
-    background-color:rgba(27, 21, 21, 0.5);
+    background-color: rgba(27, 21, 21, 0.5);
 }
 
 .social-networks {
     text-align: center;
 }
 
-.social-networks > li {
+.social-networks>li {
     display: inline;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -185,16 +187,16 @@ footer {
         justify-content: center;
         max-height: 80%;
     }
-    
+
     #logo {
         max-width: 70%;
         height: auto;
     }
 
-  }
+}
 
-  /* Small screens from 380px and down */
-  @media screen and (max-width: 450px) {
+/* Small screens from 380px and down */
+@media screen and (max-width: 450px) {
     #quiz-container {
         padding: 2rem 1rem;
         height: 40rem;
@@ -204,15 +206,15 @@ footer {
         height: 2rem;
     }
 
-    .social-networks > li {
+    .social-networks>li {
         display: inline;
         padding-left: 1rem;
         padding-right: 1rem;
     }
 
-  }
-  
-  .glow-effect {
+}
+
+.glow-effect {
     --glow-line-color: #fff;
     --glow-line-thickness: 2px;
     --glow-line-length: 20px;
@@ -222,19 +224,19 @@ footer {
     --animation-speed: 1200ms;
     --container-offset: 100px;
     position: relative;
-  }
-  
-  .glow-container {
+}
+
+.glow-container {
     pointer-events: none;
     position: absolute;
     inset: calc(var(--container-offset) / -20);
     width: calc(100% + var(--container-offset));
     height: calc(100% + var(--container-offset));
     opacity: 0;
-  }
-  
-  .glow-blur,
-  .glow-line {
+}
+
+.glow-blur,
+.glow-line {
     position: relative;
     width: calc(100% - var(--container-offset) + var(--glow-offset));
     height: calc(100% - var(--container-offset) + var(--glow-offset));
@@ -242,56 +244,59 @@ footer {
     stroke: black;
     stroke-width: 5px;
     stroke-dasharray: var(--glow-line-length) calc(50px - var(--glow-line-length));
-  }
-  
-  .glow-effect:is(:hover, :focus) :is(.glow-line, .glow-blur) {
+}
+
+.glow-effect:is(:hover, :focus) :is(.glow-line, .glow-blur) {
     stroke-dashoffset: -80px;
     transition: stroke-dashoffset var(--animation-speed) ease-in;
-  }
-  
-  .glow-line {
+}
+
+.glow-line {
     stroke: var(--glow-line-color);
     stroke-width: var(--glow-line-thickness);
-  }
-  
-  .glow-blur {
+}
+
+.glow-blur {
     filter: blur(var(--glow-blur-size));
     stroke: var(--glow-blur-color);
     stroke-width: var(--glow-blur-size);
-  }
-  
-  .glow-effect:is(:hover, :focus) .glow-container {
+}
+
+.glow-effect:is(:hover, :focus) .glow-container {
     animation: glow-visibility ease-in-out var(--animation-speed);
-  }
-  
-  @keyframes glow-visibility {
+}
+
+@keyframes glow-visibility {
+
     0%,
     100% {
-      opacity: 0;
+        opacity: 0;
     }
+
     25%,
     75% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  .glow-effect[data-glow-animation="false"] {
-    --glow-line-length: 50px;
-  }
-  .glow-effect[data-glow-offset="true"] {
-    --glow-offset: 10px;
-  }
-  
-  .glow-effect[data-glow-animation="grow"]:is(:hover, :focus) .glow-container {
-    scale: 1.3;
-    transition: scale var(--animation-speed) linear;
-  }
+}
 
-  @keyframes fadeInAnimation {
+.glow-effect[data-glow-animation="false"] {
+    --glow-line-length: 50px;
+}
+
+.glow-effect[data-glow-offset="true"] {
+    --glow-offset: 10px;
+}
+
+.glow-effect[data-glow-animation="grow"]:is(:hover, :focus) .glow-container {
+    transition: scale var(--animation-speed) linear;
+}
+
+@keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-     }
- }
+    }
+}

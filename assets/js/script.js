@@ -19,24 +19,24 @@ glowEffects.forEach((glowEffect) => {
     const rx = getComputedStyle(glowEffect).borderRadius;
 
     glowLines.forEach((line) => {
-    line.setAttribute("rx", rx);
+        line.setAttribute("rx", rx);
     });
 });
 
-function getRandomQuestions (questions) {
-    return questions.sort(() => Math.random() - 0.5).slice(0, 10)
+function getRandomQuestions(questions) {
+    return questions.sort(() => Math.random() - 0.5).slice(0, 10);
 }
 
-const questionsArray = []
+const questionsArray = [];
 
 fetch('./assets/questions.json')
-  .then((response) => response.json())
-  .then((data) => questionsArray.push(...getRandomQuestions((data))));
+    .then((response) => response.json())
+    .then((data) => questionsArray.push(...getRandomQuestions((data))));
 
 /**
  * Restarts the game, hiding the score container and shows the quizcontainer again
  */
-restart.addEventListener("click", function() {
+restart.addEventListener("click", function () {
     initial();
     quizContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
@@ -53,7 +53,7 @@ function displayNext() {
         quizContainer.classList.add("hide");
         scoreContainer.classList.remove("hide");
         playerScore.innerHTML = "Your Score is " +
-        scoreCount + " out of " + questionCount;
+            scoreCount + " out of " + questionCount;
     } else {
         countOfQuestion.innerHTML = questionCount + 1 + " of " + questionsArray.length + " Question";
 
@@ -66,7 +66,7 @@ function displayNext() {
 
 nextButton.addEventListener("click", displayNext);
 
-function quizDisplay (questionCount) {
+function quizDisplay(questionCount) {
     let quizCards = document.querySelectorAll(".container-mid");
 
     quizCards.forEach(function (card) {
@@ -79,12 +79,12 @@ function quizDisplay (questionCount) {
  * Shows a timer and counts down from 10.
  */
 function timerDisplay() {
-    countdown = setInterval(function() {
+    countdown = setInterval(function () {
         count--;
         timeLeft.innerHTML = `${count}s`;
         if (count == 0) {
             clearInterval(countdown);
-            displayNext() ;
+            displayNext();
         }
     }, 1000);
 }
@@ -93,13 +93,17 @@ function timerDisplay() {
  * Creates the quiz with random questions out of the questionsArray.
  */
 function quizCreator() {
-    questionsArray.sort(function () {return Math.random() - 0.5; });
+    questionsArray.sort(function () {
+        return Math.random() - 0.5;
+    });
 
-    for(let i of questionsArray) {
-        i.options.sort(function () {return Math.random() -0,5; });
+    for (let i of questionsArray) {
+        i.options.sort(function () {
+            return Math.random() - 0, 5;
+        });
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
-        
+
         countOfQuestion.innerHTML = 1 + " of " + questionsArray.length + " Question";
 
         let question_DIV = document.createElement("p");
@@ -108,13 +112,13 @@ function quizCreator() {
         div.appendChild(question_DIV);
 
         div.innerHTML += `
-        <button class="option-div" onclick="assertAnswer(this)">
+        <button class="option-div" onclick="${assertAnswer.name}(this)">
         ${i.options[0]}</button>
-        <button class="option-div" onclick="assertAnswer(this)">
+        <button class="option-div" onclick="${assertAnswer.name}(this)">
         ${i.options[1]}</button>
-        <button class="option-div" onclick="assertAnswer(this)">
+        <button class="option-div" onclick="${assertAnswer.name}(this)">
         ${i.options[2]}</button>
-        <button class="option-div" onclick="assertAnswer(this)">
+        <button class="option-div" onclick="${assertAnswer.name}(this)">
         ${i.options[3]}</button>
         `;
 
@@ -153,7 +157,7 @@ function assertAnswer(userOption) {
  * Initial function to clear the quiz and start from zero.
  */
 function initial() {
-    gameContainer.innerHTML= "";
+    gameContainer.innerHTML = "";
     questionCount = 0;
     scoreCount = 0;
     scoreCount = 0;
