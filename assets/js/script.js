@@ -1,23 +1,24 @@
+const countOfQuestion = document.querySelector(".number-of-question");
+const gameContainer = document.getElementById("container");
+const glowEffects = document.querySelectorAll(".glow-effect");
+const nextButton = document.getElementById("next-question-button");
+const playerScore = document.getElementById("player-score");
+const quizContainer = document.getElementById("quiz-container");
+const restart = document.getElementById("restart-button");
+const scoreContainer = document.querySelector(".score-container");
+const timeLeft = document.querySelector(".time-left");
+const welcomeButton = document.getElementById("welcome-button");
+const welcomeScreen = document.querySelector(".welcome-screen");
 let count = 11;
 let countdown;
-let countOfQuestion = document.querySelector(".number-of-question");
-let quizContainer = document.getElementById("quiz-container");
-let nextButton = document.getElementById("next-question-button");
-let playerScore = document.getElementById("player-score");
 let questionCount;
-let gameContainer = document.getElementById("container");
-let restart = document.getElementById("restart-button");
-let scoreContainer = document.querySelector(".score-container");
 let scoreCount = 0;
-let timeLeft = document.querySelector(".time-left");
-let welcomeButton = document.getElementById("welcome-button");
-let welcomeScreen = document.querySelector(".welcome-screen");
 
 function getRandomQuestions (questions) {
     return questions.sort(() => Math.random() - 0.5).slice(0, 10)
 }
 
-let questionsArray = []
+const questionsArray = []
 
 fetch('./assets/questions.json')
   .then((response) => response.json())
