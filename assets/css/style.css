@@ -182,7 +182,7 @@ footer {
     #logo-header {
         display: flex;
         justify-content: center;
-        max-height: 40%;
+        max-height: 80%;
     }
     
     #logo {
