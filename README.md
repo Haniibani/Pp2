@@ -1,108 +1,163 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Harry Potter Quiz
 
-Welcome Haniibani,
+With the current release of Hogwarts Legacy i thought it was a fun way to continue the hype about the wonderful world of Harry Potter. A simple quiz to test the users knowledge.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+<img src="assets/README-images/mock_up.png" alt="Picture of webpage across different devices" width="600px">
 
-## Gitpod Reminders
+##  Table of content
+- [User Experience (UX)](#user-experience--ux-)
+- [Technologies used](#technologies-used)
+- [Features](#features)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Experience (UX)
+### User stories
+#### Visitor goals
+- The main goal is to let the user test their Harry Potter knowledge.
+- The user should have good insight in the content when viewing the startpage.
+- The user should have an easy accesible button to start the quiz.
+- The user should receive direct feedback on wheter the answer is correct or not.
+- The user should have the possiblity to restart the quiz and try to improve.
 
-`python3 -m http.server`
+### Design 
 
-A blue button should appear to click: _Make Public_,
+The colourful background with the "old-school" pargment above gives the right mood for the  quiz, its Harry Potter and the design just feels like you're in this magical world full of wonders. 
 
-Another blue button should appear to click: _Open Browser_.
+1. Images
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+To support the topic of the quiz a background image of diagonally was choosen, then a pargment for the quizsection to get into the "Harry Potter" feeling.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+2. Colour Scheme
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Beacuse of the colourful background image the other parts of the design where kept simple. Beside the pragment the colour black where chosen for this. This also provide optimal accesibilty. 
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+3. Typography
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The font chosen is Sans-serif. 
 
-------
+## Technologies used 
+### languages
+- CSS
+- HTML
+- Javascript
 
-## Release History
+### Frameworks, Libraries & Programs Used
+- [font awesome](https://fontawesome.com/): the icon of the snowflakes is from Font awesome
+- Git: Git was use commit and push to github 
+- [GitPod](https://gitpod.io/): Gitpod was used as the development environment for this project. In order to track development stage and version control regular commits and pushes to GitHub has been made. The GitPod environment was created using a template provided by Code Institute.
+- [GitHub](https://github.com/): Github was used to deploy the site and store it  
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Features
+### Instructions
+The first visible elements when you load the page are the Harry Potter logo and the background image of Diagonally. A begin button is showing in the middle of the screen. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<img src="assets/README-images/start_screen.png" alt="Picture Startscreen with logo and a button to begin" width="600px">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Questions
+When the user press start you are presented with the question and four possible answers. 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<img src="assets/README-images/questions.png" alt="picture questions with options" width="600px">
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Questions with direct feedback 
+When the user have chosen an answer you get instant feedback on which answers are correct (Green background on the option) or incorrect (Reb background on the choosen option and green on the correct option).
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<img src="assets/README-images/question_feedback.png" alt="picture of answers with wrong and right option" width="600px">
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Feedback en score
+In this box the score is presented with a restart button incase the user want so try again.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<img src="assets/README-images/feedback.png" alt="picture of score and feedback" width="600px">
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Testing 
+## testing of the user story
+### User stories
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+|Goal| execution|
+|--------------------------------------------------------------------------------------|-------------------------------------------------------|
+| The main goal is to let the user test their Harry Potter knowledge.| The Quiz lets them test their knowledge and restart if they want to try and improve.|
+| The user should have good insight in the content when viewing the startpage.| The backgroundimage and the logo gives the user a clear sight of wwhat the quiz will be about|
+| The user should have an easy accesible button to start the quiz.| The beginbutton is clear an easily visable.|
+| The user should receive direct feedback on whether the answer is correct or not.| A clear red and green color is used for the user to easily see which option was correct.|
+| The user should have the possiblity to restart the quiz and try to improve.| When the quiz finishes the user gets a clear Restartbutton if they wanna try again.|
+## manual code testing
+### responsiveness
+The website is adapted to be seen on different screen sizes. 
+The responsiveness of the website was first tested by chrome developer tools. 
+Different breakpoints where used to view the website. 
+Next to this the website was viewed on different devices: laptop, tablet and smartphones. 
 
-------
+### Browser compatibility 
+The website was tested in different browsers. 
 
-## FAQ about the uptime script
+|Browser| compatibility|
+|------------------------------------|-------------|
+|Mozilla Firefox versie 102.0|no problems|
+|Microsoft Edge Versie 103.0.1264.44|no problems|
+|Google Chrome Versie 103.0.5060.114 | no problems|
 
-**Why have you added this script?**
+### Validator Testing 
+1. HTML
+No errors where found by the official W3C validator
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<img src="assets/README-images/HTML_validate.png" alt="picture of W3C validator results" width="600px">
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+2. CSS
+No errors where found by the official Jigsaw validator
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<img src="assets/README-images/css_validate.png" alt="picture of Jigsaw validator results" width="600px">
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+3. JSHint 
+No errors where found by the official JSHint validator
 
-**So….?**
+<img src="assets/README-images/jshint.png" alt="picture of Jigsaw validator results" width="600px">
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Fixed bugs 
+- Footer misplaced, Fixed by adding position: absolute; and set bottom: 0.
+- Logo image got very small on smaller screens, Fixed by setting new widthsizes in mediequeries.
+- DisplayNext function not properly working, Fixed by extrating the function from local scope to global scope.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Unfixed bugs
+- The timer takes an extra second to start the countdown. 
+- pathlenght attribute on rect tag was not allowed in HTML linter.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Deployment 
+The live version of the project is deployed at GitHub pages.
 
-**Anything more?**
+The procedure for deployment followed the "Creating your site" steps provided in [GitHub Docs.](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+1. Log into GitHub.
+2. Locate the GitHub Repository that shall be deployed live.
+3. At the top of the repository, select Settings from the menu items.
+4. Scroll down the Settings page to the ”GitHub Pages" section and click on the ”Check it out here!”
+5. At the ”Source” section choose ”main” as Branch and root as folder and click ”Save”
+6. The website will deploy and the pages refreshes to provide the live link to the project.
 
----
+The link can be found here: https://haniibani.github.io/Pp2/
 
-Happy coding!
+## Credits
+
+### Images
+- All images were taken from: [Pngegg](https://www.pngegg.com/)
+
+### code 
+- The basic code used was taken from a [youtube tutorial from Dear Programmer](https://www.youtube.com/watch?v=WiLTsxjCmWQ&ab_channel=DearProgrammer) with a bunch of alterations.
+- Code for the glowing animation around the begin button from [youtube tutorial from Kevin Powell](https://www.youtube.com/watch?v=fcnDBP3k3BE&ab_channel=KevinPowell)
+- On the website of the [w3schools](https://www.w3schools.com/) I found a lot of information and codes for bugs and small changes to make.
+- Varies parts of the website were inspired by the love math walkthrough project from Code institute 
+
+### others
+- Question about lowest Harry Potter [World of Harry Potter Trivial Pursuit](https://hasbropulse.com/products/trivial-pursuit-world-of-harry-potter-ultimate-edition)
+- [Mock-up generator](https://techsini.com/multi-mockup/)
+- Martina Terlevic:  Code Institute Mentor.
