@@ -131,6 +131,7 @@ No errors where found by the official JSHint validator
 ### Unfixed bugs
 - The timer takes an extra second to start the countdown. 
 - pathlenght attribute on rect tag was not allowed in HTML linter.
+- Some specific verisons of firefox seems to produce an error: `TypeError: a.default.detectStore(...) is undefined`. However it doesn't effect functionality.
 
 ## Deployment 
 The live version of the project is deployed at GitHub pages.
