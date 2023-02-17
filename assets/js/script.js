@@ -136,14 +136,20 @@ const questionsArray = [
 
 },
 ];
-
+/**
+ * Restarts the game, hiding the score container and shows the quizcontainer again
+ */
 restart.addEventListener("click", function() {
     initial();
     quizContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
 });
 
-nextButton.addEventListener("click", (function displayNext() {
+/**
+ * Displays the next question, increse the questionCount by 1 and if there are no more questions it will show your score. 
+ */
+
+function displayNext() {
     questionCount += 1;
 
     if (questionCount == questionsArray.length) {
@@ -159,7 +165,9 @@ nextButton.addEventListener("click", (function displayNext() {
         clearInterval(countdown);
         timerDisplay();
     }
-}));
+}
+
+nextButton.addEventListener("click", displayNext);
 
 function quizDisplay (questionCount) {
     let quizCards = document.querySelectorAll(".container-mid");
@@ -168,24 +176,30 @@ function quizDisplay (questionCount) {
         card.classList.add("hide");
     });
     quizCards[questionCount].classList.remove("hide");
-};
+}
 
+/**
+ * Shows a timer and counts down from 10.
+ */
 function timerDisplay() {
     countdown = setInterval(function() {
         count--;
         timeLeft.innerHTML = `${count}s`;
-        if (count === 0) {
+        if (count == 0) {
             clearInterval(countdown);
-            displayNext();
+            displayNext() ;
         }
     }, 1000);
-};
+}
 
-function quizCreater() {
-    questionsArray.sort(function () {return Math.random() - 0.5});
+/**
+ * Creates the quiz with random questions out of the questionsArray.
+ */
+function quizCreator() {
+    questionsArray.sort(function () {return Math.random() - 0.5; });
 
     for(let i of questionsArray) {
-        i.options.sort(function () {return Math.random() -0,5});
+        i.options.sort(function () {return Math.random() -0,5; });
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
         
@@ -209,8 +223,11 @@ function quizCreater() {
 
         gameContainer.appendChild(div);
     }
-};
+}
 
+/**
+ * Checks the right answer and if correct add to scoreCount.
+ */
 function assertAnswer(userOption) {
     let userSolution = userOption.innerText;
     let question = document.getElementsByClassName("container-mid")[questionCount];
@@ -235,6 +252,9 @@ function assertAnswer(userOption) {
     });
 }
 
+/**
+ * Initial function to clear the quiz and start from zero.
+ */
 function initial() {
     gameContainer.innerHTML= "";
     questionCount = 0;
@@ -243,16 +263,22 @@ function initial() {
     count = 11;
     clearInterval(countdown);
     timerDisplay();
-    quizCreater();
+    quizCreator();
     quizDisplay(questionCount);
 }
 
+/**
+ * Button that starts the quiz and shows the "quizContainer".
+ */
 welcomeButton.addEventListener("click", function () {
     welcomeScreen.classList.add("hide");
     quizContainer.classList.remove("hide");
     initial();
 });
 
+/**
+ * when the window is loaded, shows the welcome screen with the begin button.
+ */
 window.onload = function () {
     welcomeScreen.classList.remove("hide");
     quizContainer.classList.add("hide");
