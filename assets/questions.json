@@ -114,7 +114,67 @@
             "Luna Lovegood",
             "Romilda Vain"
         ],
-        "correct": "Here Lies Dobby, A Free Elf"
+        "correct": "Romilda Vain"
+
+    },
+    {
+        "id": "10",
+        "question": "What feature of a full-grown Mandrake is fatal?",
+        "options": [
+            "Their eyes",
+            "Their bite",
+            "Their scream",
+            "Their touch"
+        ],
+        "correct": "Their scream"
+
+    },
+    {
+        "id": "11",
+        "question": "Before the battle of Hogwarts, whos voice is heard speaking to the students and teachers in the Great Hall?",
+        "options": [
+            "Professor Snape",
+            "Hermione Granger",
+            "Lord Voldemort",
+            "Bellatrix Lestrange"
+        ],
+        "correct": "Lord Voldemort"
+
+    },
+    {
+        "id": "12",
+        "question": "Who kills Nagini?",
+        "options": [
+            "Lavender Brown",
+            "Harry Potter",
+            "Luna Lovegood",
+            "Neville Longbottom"
+        ],
+        "correct": "Neville Longbottom"
+
+    },
+    {
+        "id": "13",
+        "question": "In which of Harry's school years does he become Quidditch Captain?",
+        "options": [
+            "Sixth",
+            "Seventh",
+            "Fifth",
+            "First"
+        ],
+        "correct": "Sixth"
+
+    },
+    {
+        "id": "14",
+        "question": "What is Horace Slughorn disguised as when Harry first meets him?",
+        "options": [
+            "A Bed",
+            "An Armchair",
+            "A Table",
+            "A Tree"
+        ],
+        "correct": "An Armchair"
 
     }
 ]
