@@ -13,7 +13,6 @@ body {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    z-index: 10;
 }
 
 button {
@@ -156,9 +155,10 @@ button {
 }
 
 footer {
-    height: 3rem;
-    margin-top: auto;
-    z-index: 5;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
     background-color:rgba(27, 21, 21, 0.5);
 }
 
