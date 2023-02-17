@@ -14,6 +14,15 @@ let countdown;
 let questionCount;
 let scoreCount = 0;
 
+glowEffects.forEach((glowEffect) => {
+    const glowLines = glowEffect.querySelectorAll("rect");
+    const rx = getComputedStyle(glowEffect).borderRadius;
+
+    glowLines.forEach((line) => {
+    line.setAttribute("rx", rx);
+    });
+});
+
 function getRandomQuestions (questions) {
     return questions.sort(() => Math.random() - 0.5).slice(0, 10)
 }

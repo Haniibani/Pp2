@@ -13,7 +13,13 @@
     </header>
     
     <div class="welcome-screen">
-        <button id="welcome-button">Begin</button>
+        <button class="button glow-effect" id="welcome-button" data-glow-offset="true">
+            Begin
+            <svg class="glow-container">
+              <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+              <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+            </svg>
+          </button>
     </div>
     <div id="quiz-container">
         <div class="header">
@@ -34,7 +40,13 @@
     </div>
     <div class="score-container hide">
         <div id="player-score">Player score</div>
-        <button id="restart-button">Restart</button>
+        <button class="button glow-effect" id="restart-button" data-glow-offset="true">
+            Restart
+            <svg class="glow-container">
+              <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+              <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+            </svg>
+          </button>
     </div>
 
     <footer>
